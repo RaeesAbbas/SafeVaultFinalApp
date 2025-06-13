@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<form method="post">
+    <label>Username:</label>
+    <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,30}$" required /><br />
+
+    <label>Email:</label>
+    <input type="email" name="email" required /><br />
+
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green">@ViewBag.Message</p>
+}
